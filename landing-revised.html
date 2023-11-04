@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="src/mainPage.css">
+        <script src="src/scripts/navBar.js"></script>
+        <script src="https://kit.fontawesome.com/5483943eb3.js" crossorigin="anonymous"></script>
+        <title>HTML5 Web Player - V1</title>
+    </head>
+    <body>
+        <div class="background">
+            <div class="blur"></div>
+        </div>
+        <header>
+            <nav id='menu'>
+                <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+                <ul>
+                    <li><a href="#">HTML5 WebPlayer</a></li>
+                    <li><a href='http://'>Settings</a></li>
+                    <li><a href='http://'>Source Code</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1>HTML Web5 Player</h1>
+        <p>This website is created using HTML 5, CSS 3, and JavaScript. This page consists of HTML5 Web Audio Players, and custom players from EC3 (Radio Streaming Software).</p>
+        <br>
+        <div class="titleItem">
+            <h2 class="bigH2InteractiveArea">
+                <i class="fa fa-folder-tree"></i>
+                Try it out!
+            </h2>
+            <p>Players are hidden by default to prevent overlapping on the site. Click one of the buttons to reveal either of the players along with a load stream URL form, it may be defaulted to Fuse/Blast radio temp. until the form is updated.</p>
+            <div class="buttons">
+                <button class="buttonStyle_One" id="toggle-audio-evercast">Show Player One (No Custom)</button>
+                <button class="buttonStyle_One" id="submitStreamerURL1">Show Player Two (Custom)</button>
+            </div>
+            <div id="playerPlaceHolder">
+                <div id="evercastPlayerNormal">
+                    <audio controls id="audio-evercast">
+                        <!-- Your audio source here -->
+                    </audio>
+                    <input type="text" id="submitEvercastUrlStreamer1" placeholder="Input URL">
+                    <button class="buttonStyle_One" id="revealPlayer1">Show Player Two (Custom)</button>
+                </div>
+                <script src="src/scripts/buttonSelector.js"></script>
+            </div>
+        </div>
+    </body>
+</html>
