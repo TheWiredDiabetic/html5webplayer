@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    background: #ffffff url(https://images.unsplash.com/photo-1698807390276-725f3a7e41cf?auto=format&fit=crop&q=80&w=1932&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center center/auto repeat padding-box fixed;
+}
+
+#menu {
+	background: rgb(111, 108, 103);
+	color: #FFF;
+	height: 48px;
+	padding-left: 18px;
+	border-radius: 0px;
+}
+#menu ul, #menu li {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none
+}
+#menu ul {
+	width: 100%;
+}
+#menu li {
+	float: left;
+	display: inline;
+	position: relative;
+}
+#menu a {
+	display: block;
+	line-height: 48px;
+	padding: 0 14px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 16px;
+}
+#menu a.dropdown-arrow:after {
+	content: "\25BE";
+	margin-left: 5px;
+}
+#menu li a:hover {
+	color: #000000;
+	background: #F2F2F2;
+    transition: 0.1s;
+}
+#menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 48px;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer
+}
+#menu label {
+	display: none;
+	line-height: 48px;
+	text-align: center;
+	position: absolute;
+	left: 35px
+}
+#menu label:before {
+	font-size: 1.6em;
+	content: "\2261"; 
+	margin-left: 20px;
+}
+#menu ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: #443232;
+	position: absolute;
+	z-index: 99;
+	display: none;
+}
+#menu ul.sub-menus li {
+	display: block;
+	width: 100%;
+}
+#menu ul.sub-menus a {
+	color: #FFFFFF;
+	font-size: 16px;
+}
+#menu li:hover ul.sub-menus {
+	display: block
+}
+#menu ul.sub-menus a:hover{
+	background: #F2F2F2;
+	color: #444444;
+}
+@media screen and (max-width: 800px){
+	#menu {position:relative}
+	#menu ul {background:#111;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
+	#menu ul.sub-menus {width:100%;position:static;}
+	#menu ul.sub-menus a {padding-left:30px;}
+	#menu li {display:block;float:none;width:auto;}
+	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
+	#menu input {z-index:4}
+	#menu input:checked + label {color:white}
+	#menu input:checked + label:before {content:"\00d7"}
+	#menu input:checked ~ ul {display:block}
+}
+
+.titleItem {
+    background: rgb(98, 88, 77);
+    border-left: 6px solid rgb(21, 183, 126);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    margin: 5px;
+    text-indent: 11px;
+    padding: 10px; /* Add padding to reduce the gap */
+}
+
+.buttonStyle_One {
+	background: rgb(98, 88, 77);
+	color: white;
+	font-family: 'Inter', sans-serif;
+	font-size: 18px;
+	border-radius: 10px;
+	border: 0.4px solid rgb(255, 255, 255);
+	transition: 0.1s ease-in;
+}
+
+.buttonStyle_One:hover {
+	background: rgb(255, 255, 255);
+	border: 0.4px solid rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	font-weight: 600;
+	transition: 0.1s ease-out;
+}
+
+.buttons {
+	display: block;
+}
+
+.bigH2InteractiveArea {
+	font-size: 30px; 
+	line-height: 1px;
+}
+
+audio {
+	display: flex;
+}
+
+input {
+	background: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	font-family: 'Inter', sans-serif;
+	font-size: 18px;
+	border-radius: 7px;
+	border: 2px solid rgb(165, 165, 165);
+	transition: 0.1s;
+}
+
+input:focus {
+	border-bottom: 2px solid rgb(21, 183, 126);
+	transition: 0.1s;
+	width: 100px;
+}
+
+input[type="text"] {
+	width: 100px;
+	-webkit-transition: width .35s ease-in-out;
+	transition: width .35s ease-in-out;
+}
+
+input[type="text"]:focus {
+	width: 250px;
+  }
