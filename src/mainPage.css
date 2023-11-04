@@ -170,3 +170,7 @@ input[type="text"] {
 input[type="text"]:focus {
 	width: 250px;
   }
+
+#evercastPlayerNormal {
+	display: none; /* does a dynamic thing where it hides the contents of this div which are controlled by buttonSelector.js */
+}
